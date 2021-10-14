@@ -3,9 +3,9 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "npm run build && svelte-kit build",
+		"build": "yarn build && svelte-kit build",
 		"start": "svelte-kit start",
-		"deploy": "npm run build"
+		"deploy": "yarn build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",
