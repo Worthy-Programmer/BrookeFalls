@@ -12,6 +12,7 @@ const config = {
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
 		//adapter: node(),
+		// adapter: static_adapter(),
 
 		// Comment the paths if wants to run in dev mode
 

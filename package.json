@@ -26,5 +26,10 @@
 		"unified": "^9.2.1",
 		"vite": "^2.1.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"autoprefixer": "^10.3.7",
+		"postcss": "^8.3.9",
+		"tailwindcss": "^2.2.17"
+	}
 }
