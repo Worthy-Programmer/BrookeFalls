@@ -11,7 +11,6 @@
       props: { posts }
     }
   }
-
 </script>
 
 <script>
