@@ -1,5 +1,5 @@
 import sveltePreprocess from 'svelte-preprocess';
-import vercel from '@sveltejs/adapter-vercel';
+const netlify = require('@sveltejs/adapter-netlify');
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,7 +11,7 @@ const config = {
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
 		//adapter: node(),
-		adapter: vercel(),
+		adapter: netlify(),
 
 		// Comment the paths if wants to run in dev mode
 
