@@ -2,6 +2,7 @@
 title: Create Your Blog with SvelteKit
 date: 2021-10-03
 excerpt: It's time to rewrite your blog in SvelteKit!
+url: 'https://www.brookefalls.com/uploads/1/8/4/2/18420859/editor/brookefalls.jpeg?1607475184'
 ---
 
 Recently, SvelteKit is [released in public beta](https://svelte.dev/blog/sveltekit-beta). And we could finally see what Rich Harris called "[Futuristic Web Development](https://www.youtube.com/watch?v=qSfdtmcZ4d0)" looks like. It's always better to learn with project, so I made a little blog (the one you are reading) with SvelteKit and deployed it on the Github Pages. And this series of posts are the things I learnt.

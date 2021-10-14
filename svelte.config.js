@@ -1,6 +1,4 @@
 import sveltePreprocess from 'svelte-preprocess';
-import node from '@sveltejs/adapter-node';
-import static_adapter from '@sveltejs/adapter-static';
 import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */

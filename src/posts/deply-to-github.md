@@ -2,6 +2,7 @@
 title: Deploy the blog to Github Pages
 date: 2021-10-04
 excerpt: 'Fun fact: Github Pages is free!'
+url: https://media.istockphoto.com/photos/illuminated-glass-wall-picture-id1252419763?b=1&k=20&m=1252419763&s=170667a&w=0&h=ao9KGBpdTnIZH0fRQV5GWP2Atvmf2QVR4EgnrYR_ymo=
 ---
 
 After the first post, we already have a blog that runs on the local machine. Now, let's deploy it to Github Pages!

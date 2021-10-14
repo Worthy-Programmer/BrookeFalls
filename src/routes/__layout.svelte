@@ -2,6 +2,7 @@
 	import '../app.scss';
   import Nav from '$lib/Nav.svelte';
   import GithubCorner from '$lib/GithubCorner.svelte';
+  import './tailwind.css'
 </script>
 
 <svelte:head>
@@ -20,11 +21,6 @@
   <slot></slot>
 </div>
 
-<style lang="scss">
-  .g-app-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
-  }
 
-</style>
+
+
