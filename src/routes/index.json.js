@@ -3,11 +3,12 @@ import fs from 'fs';
 import dayjs from 'dayjs';
 
 export function get() {
+	console.log(fs.readdirSync('src/posts'));
 	let posts = fs
-		.readdirSync(`/src/posts`)
+		.readdirSync(`src/posts`)
 		.filter((fileName) => /.+\.md$/.test(fileName))
 		.map((fileName) => {
-			const { metadata } = process(`/src/posts/${fileName}`);
+			const { metadata } = process(`src/posts/${fileName}`);
 			return {
 				metadata,
 				slug: fileName.slice(0, -3),
