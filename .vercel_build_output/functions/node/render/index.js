@@ -57591,9 +57591,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-47cada5a.js",
+      file: assets + "/_app/start-27ea731e.js",
       css: [assets + "/_app/assets/start-d5b4de3e.css"],
-      js: [assets + "/_app/start-47cada5a.js", assets + "/_app/chunks/vendor-3cf8be68.js", assets + "/_app/chunks/paths-28a87002.js"]
+      js: [assets + "/_app/start-27ea731e.js", assets + "/_app/chunks/vendor-3cf8be68.js", assets + "/_app/chunks/paths-28a87002.js"]
     },
     fetched: void 0,
     floc: false,
@@ -57707,7 +57707,7 @@ var module_lookup = {
     return _slug_;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-617187e4.js", "css": ["assets/pages/__layout.svelte-5dcc6264.css"], "js": ["pages/__layout.svelte-617187e4.js", "chunks/vendor-3cf8be68.js", "chunks/paths-28a87002.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-fe947246.js", "css": [], "js": ["error.svelte-fe947246.js", "chunks/vendor-3cf8be68.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-43f6e259.js", "css": ["assets/pages/index.svelte-0e907d53.css"], "js": ["pages/index.svelte-43f6e259.js", "chunks/vendor-3cf8be68.js", "pages/Post.svelte-87663729.js", "chunks/paths-28a87002.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-8392b07f.js", "css": [], "js": ["pages/about.svelte-8392b07f.js", "chunks/vendor-3cf8be68.js"], "styles": [] }, "src/routes/Post.svelte": { "entry": "pages/Post.svelte-87663729.js", "css": [], "js": ["pages/Post.svelte-87663729.js", "chunks/vendor-3cf8be68.js"], "styles": [] }, "src/routes/[slug].svelte": { "entry": "pages/[slug].svelte-cb6dae19.js", "css": ["assets/pages/[slug].svelte-ab5c8046.css"], "js": ["pages/[slug].svelte-cb6dae19.js", "chunks/vendor-3cf8be68.js", "chunks/paths-28a87002.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-617187e4.js", "css": ["assets/pages/__layout.svelte-5dcc6264.css"], "js": ["pages/__layout.svelte-617187e4.js", "chunks/vendor-3cf8be68.js", "chunks/paths-28a87002.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-fe947246.js", "css": [], "js": ["error.svelte-fe947246.js", "chunks/vendor-3cf8be68.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-9423e12b.js", "css": ["assets/pages/index.svelte-0e907d53.css"], "js": ["pages/index.svelte-9423e12b.js", "chunks/vendor-3cf8be68.js", "pages/Post.svelte-772a4b38.js", "chunks/paths-28a87002.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-8392b07f.js", "css": [], "js": ["pages/about.svelte-8392b07f.js", "chunks/vendor-3cf8be68.js"], "styles": [] }, "src/routes/Post.svelte": { "entry": "pages/Post.svelte-772a4b38.js", "css": [], "js": ["pages/Post.svelte-772a4b38.js", "chunks/vendor-3cf8be68.js"], "styles": [] }, "src/routes/[slug].svelte": { "entry": "pages/[slug].svelte-cb6dae19.js", "css": ["assets/pages/[slug].svelte-ab5c8046.css"], "js": ["pages/[slug].svelte-cb6dae19.js", "chunks/vendor-3cf8be68.js", "chunks/paths-28a87002.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -57746,8 +57746,7 @@ function process2(filename) {
   return { metadata, content };
 }
 function get$1() {
-  console.log(import_fs.default.readdirSync("src/posts"));
-  let posts = import_fs.default.readdirSync(`src/posts`).filter((fileName) => /.+\.md$/.test(fileName)).map((fileName) => {
+  let posts = import_fs.default.readdirSync(`src/posts/`).filter((fileName) => /.+\.md$/.test(fileName)).map((fileName) => {
     const { metadata } = process2(`src/posts/${fileName}`);
     return {
       metadata,
@@ -57844,7 +57843,7 @@ var Post = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { post } = $$props;
   let { col } = $$props;
   let src2 = post.metadata.url;
-  post.metadata.url;
+  let alt = post.metadata.url;
   if ($$props.base === void 0 && $$bindings.base && base2 !== void 0)
     $$bindings.base(base2);
   if ($$props.post === void 0 && $$bindings.post && post !== void 0)
@@ -57852,19 +57851,19 @@ var Post = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.col === void 0 && $$bindings.col && col !== void 0)
     $$bindings.col(col);
   return `${col == "1/3" ? `
-<div class="${"w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink"}"><div class="${"flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg"}"><a${add_attribute("href", `${base2}/${post.slug}`, 0)} class="${"flex flex-wrap no-underline hover:no-underline"}"><img${add_attribute("src", src2, 0)} class="${"h-64 w-full rounded-t pb-6"}">
+<div class="${"w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink"}"><div class="${"flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg"}"><a${add_attribute("href", `${base2}/${post.slug}`, 0)} class="${"flex flex-wrap no-underline hover:no-underline"}"><img${add_attribute("src", src2, 0)}${add_attribute("alt", alt, 0)} class="${"h-64 w-full rounded-t pb-6"}">
 			<p class="${"w-full text-gray-600 text-xs md:text-sm px-6"}">GETTING STARTED</p>
 			<div class="${"w-full font-bold text-xl text-gray-900 px-6"}">Lorem ipsum dolor sit amet.</div>
 			<p class="${"text-gray-800 font-serif text-base px-6 mb-5"}">${escape(post.metadata.excerpt)}</p></a></div>
         <div class="${"flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6"}"><div class="${"flex items-center justify-between"}"><img class="${"w-8 h-8 rounded-full mr-4 avatar"}" data-tippy-content="${"Author Name"}" src="${"http://i.pravatar.cc/300"}" alt="${"Avatar of Author"}">
                 <p class="${"text-gray-600 text-xs md:text-sm"}">1 MIN READ</p></div></div></div>` : `${col == "1/2" ? `
-	<div class="${"w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink"}"><div class="${"flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg"}"><a${add_attribute("href", `${base2}/${post.slug}`, 0)} class="${"flex flex-wrap no-underline hover:no-underline"}"><img${add_attribute("src", src2, 0)} class="${"h-full w-full rounded-t pb-6"}">
+	<div class="${"w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink"}"><div class="${"flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg"}"><a${add_attribute("href", `${base2}/${post.slug}`, 0)} class="${"flex flex-wrap no-underline hover:no-underline"}"><img${add_attribute("src", src2, 0)}${add_attribute("alt", alt, 0)} class="${"h-full w-full rounded-t pb-6"}">
                     <p class="${"w-full text-gray-600 text-xs md:text-sm px-6"}">GETTING STARTED</p>
                     <div class="${"w-full font-bold text-xl text-gray-900 px-6"}">Lorem ipsum dolor sit amet.</div>
                     <p class="${"text-gray-800 font-serif text-base px-6 mb-5"}">${escape(post.metadata.excerpt)}</p></a></div>
 	    <div class="${"flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6"}"><div class="${"flex items-center justify-between"}"><img class="${"w-8 h-8 rounded-full mr-4 avatar"}" data-tippy-content="${"Author Name"}" src="${"http://i.pravatar.cc/300"}" alt="${"Avatar of Author"}">
 			<p class="${"text-gray-600 text-xs md:text-sm"}">1 MIN READ</p></div></div></div>` : `${col == "2/3" ? `
-<div class="${"w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink"}"><div class="${"flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg"}"><a${add_attribute("href", `${base2}/${post.slug}`, 0)} class="${"flex flex-wrap no-underline hover:no-underline"}"><img${add_attribute("src", src2, 0)} class="${"h-full w-full rounded-t pb-6"}">
+<div class="${"w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink"}"><div class="${"flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg"}"><a${add_attribute("href", `${base2}/${post.slug}`, 0)} class="${"flex flex-wrap no-underline hover:no-underline"}"><img${add_attribute("src", src2, 0)}${add_attribute("alt", alt, 0)} class="${"h-full w-full rounded-t pb-6"}">
             <p class="${"w-full text-gray-600 text-xs md:text-sm px-6"}">GETTING STARTED</p>
             <div class="${"w-full font-bold text-xl text-gray-900 px-6"}">Lorem ipsum dolor sit amet.</div>
             <p class="${"text-gray-800 font-serif text-base px-6 mb-5"}">${escape(post.metadata.excerpt)}</p></a></div>
