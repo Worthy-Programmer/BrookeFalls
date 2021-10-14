@@ -3,7 +3,7 @@ import fs from 'fs';
 import dayjs from 'dayjs';
 
 export function get() {
-	console.log(fs.readdirSync('src/posts'));
+	console.log(fs.readdirSync('src/posts/'));
 	let posts = fs
 		.readdirSync(`src/posts`)
 		.filter((fileName) => /.+\.md$/.test(fileName))
