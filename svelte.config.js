@@ -1,6 +1,7 @@
 import sveltePreprocess from 'svelte-preprocess';
 import node from '@sveltejs/adapter-node';
 import static_adapter from '@sveltejs/adapter-static';
+import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,7 +13,7 @@ const config = {
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
 		//adapter: node(),
-		// adapter: static_adapter(),
+		adapter: vercel(),
 
 		// Comment the paths if wants to run in dev mode
 

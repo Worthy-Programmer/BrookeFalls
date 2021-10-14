@@ -19,7 +19,7 @@
 </svelte:head>
 
 <div>
-  <h1>SvelteKit Blog</h1>
+  <h1 class="text-blue">SvelteKit Blog</h1>
   <p class="info">{posts.length} posts.</p>
   {#each posts as post}
     <a href={`${base}/${post.slug}`}>
