@@ -22,7 +22,8 @@
 </svelte:head>
 
 <!--Container-->
-		<div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-82">
+<div class="dark:bg-darkGray max-w-full">
+	<div class=" container px-4 md:px-0 max-w-6xl mx-auto -mt-82">
 			<h1 class="text-blue-900 text-3xl ">SvelteKit Blog</h1>
       <p class="info">{posts.length} posts.</p>
 			<div class="mx-0 sm:mx-6">
@@ -104,7 +105,7 @@
 	
 
 	</div>
-
+</div>
 
 	<footer class="bg-gray-900">	
 		<div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
