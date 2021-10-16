@@ -1,6 +1,6 @@
 <script context="module">
   import { base } from '$app/paths';
-  import Post from './Post.svelte'
+  import Post from '../lib/Post.svelte'
   let src = ""
   let alt = ""
 

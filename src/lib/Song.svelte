@@ -1,6 +1,9 @@
 <script>
     import {onMount} from 'svelte'
+    import SongCard from './SongCard.svelte';
+    
     export let spotifyApi;
+  
     let songs = []
 
     onMount(async () => {
@@ -23,22 +26,17 @@
             console.log('Something went wrong!', err);
         }
     );
+
+   
 </script>
 
 <div class="flex justify-center items-center flex-wrap">
 {#if songs !== undefined}
     {#if songs.length > 0}
     {#each songs as song}
-    <div class="flex flex-col items-center m-9 ">
-        <img class="h-52" src={song.album.images[0].url} alt="">
-        <h1 class="text-darkGray">{song.album.name}</h1>
-        <h1>By: 
-            {#each song.artists as artist}
-                {artist.name}
-            {/each}    
-        <h1>
-    </div>
+        <SongCard song={song} />
     {/each}
 {/if}
 {/if}
 </div>
+

@@ -1,9 +1,7 @@
 <script>
     import {getSession} from '../envFunctions'
     import SpotifyWebApi from 'spotify-web-api-node'
-    import Song from './Song.svelte'
-    import axios from 'axios'
-    import qs from 'qs';
+    import Song from '../lib/Song.svelte'
     
     const vars = getSession();
     const {CLIENT_ID, CLIENT_SECRET, REDIRECT_URL} = vars
@@ -13,7 +11,7 @@
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     redirectUri: REDIRECT_URL,
-    accessToken: "BQBy587u3aYKJ0TrkMywlpf6BNahaVwC1YeNzfit-zpEVpvq-2cij3J3KjMEDFT9ByxHY1cydlUvPm48OYo"
+    accessToken: "BQDWD2nylJyXNKBQ-0IIHz1KKzEsFiK8rpv9Cib8V4ML8qEAWBfcojbPw3qU_8VEp7UgFjHkdzlX7KkawGE"
     });
 
     //var code = "AQB10ef01mWEsQZD7Xb9JYglDUu7tSGis0hg2XUcCF8tUbuT4UyUB4B1G4qzHAEw3kAgyCUqDRLZeeWyJMGLyyZlLPZjruw3bNSdpCywagpATR_rKV5f_Id23gQYg9H9crnUtyemTRgs-xTgZ_elTS5n6iDH_cQNAEashre3Yjq6xXoEfIHunubHnWLbOHLPzyrtIUtVmxZZHVwDb_0FNq686lVd3A"

@@ -1,9 +1,9 @@
  <script>
-     export let base;
-     export let post;
+    export let base;
+    export let post;
     export let col;
 
-	  import QRCODE from './Brooke_QR_Petals.png'
+	import QRCODE from '/Brooke_QR_Petals.png'
     let src = post.metadata.url;
     let alt = post.metadata.url;
  </script>

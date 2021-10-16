@@ -20,7 +20,7 @@
   <title>{post.metadata.title}</title>
 </svelte:head>
 
-<div class="dark:bg-darkGray">
+<div class="dark:bg-darkGray pl-3 pr-3">
   <div class="max-w-5xl mr-auto ml-auto dark:text-white">
     <h1 class="title">{post.metadata.title}</h1>
     <p class="info"><a href="https://github.com/Dev-Logan-Bennett">Logan Bennett</a> {date}</p>

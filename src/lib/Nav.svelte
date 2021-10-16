@@ -25,7 +25,7 @@
 	  }
 	}
 
-	let dark = true;
+	let dark = false;
   
 </script>
 
