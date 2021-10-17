@@ -1,0 +1,5 @@
+[build]
+  command = "cd lambda/ && npm install && cd ../ && npm run build"
+  publish = "build/"
+  functions = "lambda"
+  node_bundler = "esbuild"
