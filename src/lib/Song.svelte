@@ -14,6 +14,7 @@
 
   onMount(async () => {
     songs = await fetch();
+    console.log(songs);
     return songs;
   });
 
@@ -63,17 +64,16 @@
     document.getElementById(transitioningImage.id).style.opacity = 0;
 
     if (transitioningImage.id === '6KMQRCEtB8pTxjgXzz7oNC') {
-      document
-        .getElementById('carousel-container')
-        .classList.add('bg-gray-500');
-    } else if (transitioningImage.id === '1k8MJLrIPOWpAaAPBRBKSw') {
-      document
-        .getElementById('carousel-container')
-        .classList.add('bg-gray-500');
-    } else if (transitioningImage.id === '6XCxe4Tphv9xhSUNa0W7A4') {
-      document
-        .getElementById('carousel-container')
-        .classList.add('bg-gray-500');
+      document.getElementById('carousel-container').style.backgroundColor =
+        'yellow';
+    }
+    if (transitioningImage.id === '1k8MJLrIPOWpAaAPBRBKSw') {
+      document.getElementById('carousel-container').style.backgroundColor =
+        'orange';
+    }
+    if (transitioningImage.id === '6XCxe4Tphv9xhSUNa0W7A4') {
+      document.getElementById('carousel-container').style.backgroundColor =
+        'gray';
     }
     //document.getElementById(transitioningImage.id).classList.remove('hidden');
 

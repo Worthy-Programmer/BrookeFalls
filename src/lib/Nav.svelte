@@ -5,7 +5,7 @@
 <div>
   <nav class="relative flex items-center justify-between h-16">
     <a href="{base}/"><h3 class="text-xl text-blue-900">HOME 🏠</h3></a>
-  
+   	<a href="{base}/play"><h3 class="text-xl text-blue-900">PLAY 🎧</h3></a>
 		<div class="mr-5 flex w-1/2 justify-end items-center">		
       <a class="flex items-center h-10 p-2 md:h-auto md:p-4" href="/about">
         <h2>About</h2>

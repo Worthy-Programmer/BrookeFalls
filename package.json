@@ -20,7 +20,10 @@
 	"dependencies": {
 		"autoprefixer": "^10.3.7",
 		"axios": "^0.23.0",
+		"dot-env": "^0.0.1",
 		"postcss": "^8.3.9",
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0",
 		"qs": "^6.10.1",
 		"spotify-web-api-node": "^5.0.2",
 		"tailwindcss": "^2.2.17"

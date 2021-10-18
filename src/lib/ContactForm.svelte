@@ -1,26 +1,56 @@
-<div class="w-100 mt-4">
-  <div class='flex justify-center'>
-    <h1>Got Questions?! Contact me!</h1>
+<div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Create your account</h2>
+    <p class="mt-2 text-center text-sm text-gray-600 max-w">
+      Already registered?
+      <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign in</a>
+    </p>
   </div>
 
-  <div class="w-100 flex justify-center items-center mx-auto bg-gray-100">
-    <form action="#" class="w-full md:w-3/4 lg:w-3/6 p-4">
-        <div class="p-3">
-          <input class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-400 rounded-md w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300" type="text" placeholder="Name" required>
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
+      <form class="mb-0 space-y-6" action="#" method="POST">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+          <div class="mt-1 pt-3 pb-3">
+            <input id="email" name="email" type="email" autocomplete="email" required class="p-3 border-2" />
+          </div>
         </div>
-        <div class="p-3">
-          <input class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-400 rounded-md w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300" type="email" placeholder="Email Id" required>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <div class="mt-1 pt-3 pb-3">
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="p-3 border-2" />
+          </div>
         </div>
-        <div class="p-3">
-          <input class="block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-400 rounded-md w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300" type="number" placeholder="Mobile Number" required>
+
+        <div>
+          <label for="company-size" class="block text-sm font-medium text-gray-700">Party size</label>
+          <div class="mt-1">
+            <select name="company-size" id="company-size" class="p-3 border-2">
+              <option value="">Please select</option>
+              <option value="small">1 to 10 people</option>
+              <option value="medium">11 to 50 people</option>
+              <option value="large">50+ people</option>
+            </select>
+          </div>
         </div>
-        <div class="p-3">
-          <textarea class="resize-none border rounded-md block appearance-none placeholder-gray-500 placeholder-opacity-100 border border-light-blue-400 rounded-md w-full py-3 px-4 text-gray-700 leading-5 focus:outline-none focus:ring-2 focus:ring-light-blue-300 h-56" placeholder="Message" required></textarea>
+
+        <div class="flex items-center">
+          <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox" class="" />
+          <label for="terms-and-privacy" class="ml-2 block text-sm text-gray-900"
+            >I agree to the
+            <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms</a>
+            and
+            <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a>.
+          </label>
         </div>
-        <div class="p-3 pt-4">
-        <button class="w-full bg-gray-700 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded text-2xl">
-        Send
-        </button>
+
+        <div>
+          <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign up</button>
+        </div>
       </form>
     </div>
+  </div>
 </div>
