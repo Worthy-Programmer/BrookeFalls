@@ -46,7 +46,7 @@
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     redirectUri: REDIRECT_URL,
-    accessToken: access_token,
+    accessToken: `${access_token}`,
   });
 </script>
 

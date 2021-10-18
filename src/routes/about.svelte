@@ -181,11 +181,6 @@
 
 <section class="bg-white border-b py-8">
   <div class="container max-w-5xl mx-auto m-8">
-    <h1
-      class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
-    >
-      Title
-    </h1>
     <div class="w-full mb-4">
       <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
     </div>
@@ -205,13 +200,13 @@
         <Thumb />
       </div>
     </div>
-    <div class="flex flex-wrap xl:w-[1260px] flex-col-reverse sm:flex-row">
+    <div class="flex flex-wrap xl:w-[1060px] flex-col-reverse">
       <div class="bg-black p-9 text-gray-300 min-h-screen p-2">
         <!-- header -->
         <div class="flex flex-wrap p-5">
           <img
-            class="mr-6"
-            src="https://www.brookefalls.com/uploads/1/8/4/2/18420859/editor/brookefalls.jpeg?1607475184"
+            class="mr-6 h-[460px]"
+            src="https://yt3.ggpht.com/vhUgGzGNZhWO5haBqTgF2ZMnqHDWX2usT0RVvlvEaGd0FbfKelxkjKYHBe0Wecip_f39ow7-5A=s900-c-k-c0x00ffffff-no-rj"
           />
           <div class="flex flex-col justify-center">
             <!-- content -->
@@ -259,107 +254,36 @@
     </div>
   </div>
 </section>
-<section class="bg-white border-b py-8">
-  <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+<div class="grid place-items-center min-h-screen">
+  <!-- Responsive Grid Layout -->
+  <div
+    class="p-4 max-w-5xl grid gap-4 xs:grid-cols-2 xs:p-8 md:grid-cols-4 lg:gap-6"
+  >
     <h1
-      class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+      class="text-4xl font-extrabold xs:col-span-2 xs:grid xs:gap-4 xs:grid-cols-2 md:col-span-3 md:text-5xl md:grid-cols-3 lg:text-6xl"
     >
-      Title
+      <span class="md:col-span-2">Grid layout with Tailwind CSS.</span>
     </h1>
-    <div class="w-full mb-4">
-      <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
-    </div>
-    <div class="w-full md:w-2/5 p-6 flex flex-col flex-grow flex-shrink">
-      <div
-        class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-      >
-        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-          <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-            xGETTING STARTED
-          </p>
-          <div class="w-full font-bold text-xl text-gray-800 px-6">
-            Lorem ipsum dolor sit amet.
-          </div>
-          <p class="text-gray-800 text-base px-6 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-            ipsum eu nunc commodo posuere et sit amet ligula.
-          </p>
-        </a>
-      </div>
-      <div
-        class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-      >
-        <div class="flex items-center justify-start">
-          <button
-            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-            Action
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-      <div
-        class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-      >
-        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-          <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-            xGETTING STARTED
-          </p>
-          <div class="w-full font-bold text-xl text-gray-800 px-6">
-            Lorem ipsum dolor sit amet.
-          </div>
-          <p class="text-gray-800 text-base px-6 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-            ipsum eu nunc commodo posuere et sit amet ligula.
-          </p>
-        </a>
-      </div>
-      <div
-        class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-      >
-        <div class="flex items-center justify-center">
-          <button
-            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-            Action
-          </button>
-        </div>
-      </div>
-    </div>
-    <div
-      class="w-full items-center justify-center md:w-1/3 p-6 flex flex-col flex-grow flex-shrink"
+    <p
+      class="xs:row-start-2 xs:col-start-2 xs:self-center md:col-start-1 md:col-span-2 md:pr-12 md:text-lg"
     >
-      <div
-        class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-      >
-        <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-          <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-            xGETTING STARTED
-          </p>
-          <div class="w-full font-bold text-xl text-gray-800 px-6">
-            Lorem ipsum dolor sit amet.
-          </div>
-          <p class="text-gray-800 text-base px-6 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-            ipsum eu nunc commodo posuere et sit amet ligula.
-          </p>
-        </a>
-      </div>
-      <div
-        class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-      >
-        <div class="flex items-center justify-end">
-          <button
-            class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-            Action
-          </button>
-        </div>
-      </div>
-    </div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic
+      itaque alias officiis.
+    </p>
+    <div class="h-16 bg-blue-500 xs:h-auto xs:square" />
+    <div class="h-16 bg-blue-500 xs:h-auto xs:square" />
+    <div class="h-16 bg-pink-500 xs:h-auto xs:square" />
+    <div class="h-16 bg-blue-500 xs:h-auto xs:square md:col-start-2" />
+    <div class="h-16 bg-pink-500 xs:h-auto xs:square" />
+    <div class="h-16 bg-blue-500 xs:h-auto xs:square" />
+    <div class="h-16 bg-blue-500 xs:h-auto xs:square" />
+    <div class="h-16 bg-pink-500 xs:h-auto xs:square" />
+    <p class="self-center md:text-lg md:col-span-2 md:text-center md:px-4">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit, and some more.
+    </p>
   </div>
-</section>
+</div>
+
 <section
   class="flex flex-col lg:flex-row items-start items-center lg:justify-center w-full w-full lg:px-10 py-12 "
 >
@@ -379,14 +303,14 @@
     </ul>
     <button
       class=" uppercase text-center text-sm mt-12 xl:px-24 px-12 sm:px-16 py-2 font-bold text-primary-very-light rounded-md"
-      style="background-image:linear-gradient(90deg, #a3a8f0 0%, #696fdd 100%);"
+      style="background:'#369DBD'"
     >
       Learn More
     </button>
   </article>
   <article
     class="lg:w-custom w-4/5 mb-10 px-6 py-16 lg:-mt-6 text-white text-center rounded-lg"
-    style="background-image:linear-gradient(90deg, #a3a8f0 0%, #696fdd 100%);"
+    style="background:'#369DBD'"
   >
     <h5 class="font-bold text-base ">Professional</h5>
     <h2
@@ -423,7 +347,7 @@
     </ul>
     <button
       class="uppercase text-center text-sm mt-12 xl:px-24 px-12 sm:px-16 py-2 rounded-md font-bold text-primary-very-light"
-      style="background-image:linear-gradient(90deg, #a3a8f0 0%, #696fdd 100%);"
+      style="background:'#369DBD'"
     >
       Learn More
     </button>
@@ -437,9 +361,19 @@
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
-  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+  <defs>
+    <linearGradient id="g1">
+      <stop stop-color="#e57d00" />
+      <stop offset=".11" stop-color="#ca300a" />
+      <stop offset=".24" stop-color="#dc4f72" />
+      <stop offset=".37" stop-color="#569fd3" />
+      <stop offset=".68" stop-color="#0c56a2" />
+      <stop offset=".89" stop-color="#a47725" />
+    </linearGradient>
+  </defs>
+  <g stroke="none" stroke-width="1" fill="url(#g1)" fill-rule="evenodd">
     <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-      <g class="wave" fill="#f8fafc">
+      <g class="wave">
         <path
           d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
         />
@@ -474,14 +408,9 @@
   <div class="w-full mb-4">
     <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
   </div>
-  <h3 class="my-4 text-3xl leading-tight">
-    Main Hero Message to sell yourself!
+  <h3 class="my-4 text-3xl leading-tight pb-9">
+    I'll be at the Lamberville Inn this Thursday!
   </h3>
-  <button
-    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-  >
-    Action!
-  </button>
 </section>
 <ContactForm />
 
