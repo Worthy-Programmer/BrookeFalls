@@ -10,5 +10,6 @@
   "dependencies": {},
   "devDependencies": {
     "md-yaml-json": "^1.1.1"
-  }
+  },
+  "type": "module"
 }
