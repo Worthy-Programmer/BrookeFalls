@@ -1,6 +1,5 @@
-import { Handler } from '@netlify/functions';
-import axios from 'axios';
-import { getSession } from '../../src/envFunctions';
+const axios = require('axios');
+const { getSession } = require('../../src/envFunctions');
 
 const vars = getSession();
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, AUTH_CODE } = vars;
@@ -9,7 +8,7 @@ const authBuffer = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString(
   'base64'
 );
 
-const handler = async () => {
+exports.handler = async () => {
   const { data } = await axios({
     method: 'POST',
     url: 'https://accounts.spotify.com/api/token',
@@ -32,5 +31,3 @@ const handler = async () => {
     body: JSON.stringify(data),
   };
 };
-
-export { handler };

@@ -1,6 +1,6 @@
-import path from 'path';
+const path = require('path');
 
-import { processFile, processDir } from 'md-yaml-json';
+const { processFile, default: processDir } = require('md-yaml-json');
 
 const postsDir = 'posts/';
 const absPostsDir = path.join(__dirname, postsDir);
