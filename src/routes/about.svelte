@@ -2,57 +2,24 @@
   import ContactForm from '$lib/ContactForm.svelte';
   import Thumb from '$lib/Thumb.svelte';
   import { onMount } from 'svelte';
-  import { getSession } from '../envFunctions';
-  import axios from 'axios';
-  import qs from 'qs';
-  import SpotifyWebApi from 'spotify-web-api-node';
   import SpotifySong from '$lib/SpotifySong.svelte';
 
-  const vars = getSession();
-  const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL } = vars;
-  let songs = [];
+  export let songs;
+
   let songs_time = 0;
   let shuffledSongs = [];
   let clicked = true;
-  //   var code =
-  //     'AQB10ef01mWEsQZD7Xb9JYglDUu7tSGis0hg2XUcCF8tUbuT4UyUB4B1G4qzHAEw3kAgyCUqDRLZeeWyJMGLyyZlLPZjruw3bNSdpCywagpATR_rKV5f_Id23gQYg9H9crnUtyemTRgs-xTgZ_elTS5n6iDH_cQNAEashre3Yjq6xXoEfIHunubHnWLbOHLPzyrtIUtVmxZZHVwDb_0FNq686lVd3A';
 
-  const headers = {
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    auth: {
-      username: CLIENT_ID,
-      password: CLIENT_SECRET,
-    },
-  };
-  const data = {
-    grant_type: 'client_credentials',
-  };
+  export async function load({ fetch, page: { host } }) {
+    const songs = await (
+      await fetch(`https://${host}/.netlify/functions/songs`)
+    ).json();
 
-  const postReqToken = async () => {
-    try {
-      const response = await axios.post(
-        'https://accounts.spotify.com/api/token',
-        qs.stringify(data),
-        headers
-      );
-      console.log(response.data.access_token);
-      return response.data.access_token;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  let access_token = postReqToken();
-
-  const spotifyApi = new SpotifyWebApi({
-    clientId: CLIENT_ID,
-    clientSecret: CLIENT_SECRET,
-    redirectUri: REDIRECT_URL,
-    accessToken: `${access_token}`,
-  });
+    console.log(songs);
+    return {
+      props: { songs },
+    };
+  }
 
   onMount(async () => {
     songs = await fetch();
@@ -64,21 +31,6 @@
     songs_time = songs.reduce((sum, song) => sum + song.duration_ms, 0);
     return songs;
   });
-  // Do search using the access token
-  const fetch = async () =>
-    spotifyApi.searchTracks('artist:brooke falls').then(
-      function (data) {
-        let songs = data.body.tracks.items.map((e) => {
-          if (e.artists.some((y) => y.name === 'brooke falls')) {
-            return e;
-          }
-        });
-        return songs.filter((value) => value !== undefined);
-      },
-      function (err) {
-        console.log('Something went wrong!', err);
-      }
-    );
 
   const millisToMinutesAndSeconds = (millis) => {
     var minutes = Math.floor(millis / 60000);

@@ -9,30 +9,7 @@
   let autoplay = false;
   let autoplaySpeed = 5000;
 
-  export let spotifyApi;
-  let songs = [];
-
-  onMount(async () => {
-    songs = await fetch();
-    console.log(songs);
-    return songs;
-  });
-
-  // Do search using the access token
-  const fetch = async () =>
-    spotifyApi.searchTracks('artist:brooke falls').then(
-      function (data) {
-        let songs = data.body.tracks.items.map((e) => {
-          if (e.artists.some((y) => y.name === 'brooke falls')) {
-            return e;
-          }
-        });
-        return songs.filter((value) => value !== undefined);
-      },
-      function (err) {
-        console.log('Something went wrong!', err);
-      }
-    );
+  export let songs;
 
   let interval;
 
