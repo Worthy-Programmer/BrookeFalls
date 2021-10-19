@@ -4,51 +4,55 @@ h3,
 p,
 a,
 ul {
-	font-family: 'Overpass', sans-serif;
-	font-weight: 400;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
 }
 
 a {
-	color: #ff3e00 !important;
-	text-decoration: none;
-	&:hover {
-		color: #40b3ff;
-	}
+  color: #ff3e00 !important;
+  text-decoration: none;
+  &:hover {
+    color: #40b3ff;
+  }
+}
+
+nav a {
+  color: black !important;
 }
 
 code {
-	font-family: 'Fira Mono', monospace !important;
-	font-size: 14px;
-	font-weight: 400;
+  font-family: 'Fira Mono', monospace !important;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 h1 {
-	font-size: 40px;
-	color: #676778;
+  font-size: 40px;
+  color: #676778;
 }
 
 h2 {
-	font-size: 26px;
-	color: #444;
+  font-size: 26px;
+  color: #444;
 }
 
 h3 {
-	font-size: 22px;
-	color: #222;
+  font-size: 22px;
+  color: #222;
 }
 
 p,
 ul {
-	font-size: 18px;
-	color: #444;
-	margin-top: 10px !important;
-	margin-bottom: 10px !important;
-	&.info {
-		font-size: 14px !important;
-		margin-top: 15px !important;
-	}
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  &.info {
+    font-size: 14px !important;
+    margin-top: 15px !important;
+  }
 }
 
 .post {
-	padding: 20px;
+  padding: 20px;
 }

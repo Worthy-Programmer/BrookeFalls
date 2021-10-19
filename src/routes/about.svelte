@@ -51,7 +51,7 @@
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     redirectUri: REDIRECT_URL,
-    accessToken: access_token,
+    accessToken: `${access_token}`,
   });
 
   onMount(async () => {
@@ -180,6 +180,56 @@
 </div>
 
 <section class="bg-white border-b py-8">
+  <div class="flex flex-wrap xl:w-[1060px] flex-col-reverse">
+    <div class="bg-black p-9 text-gray-300 min-h-screen p-2">
+      <!-- header -->
+      <div class="flex flex-wrap p-5">
+        <img
+          class="mr-6 h-[460px]"
+          src="https://yt3.ggpht.com/vhUgGzGNZhWO5haBqTgF2ZMnqHDWX2usT0RVvlvEaGd0FbfKelxkjKYHBe0Wecip_f39ow7-5A=s900-c-k-c0x00ffffff-no-rj"
+        />
+        <div class="flex flex-col justify-center">
+          <!-- content -->
+          <h4 class="mt-0 mb-2 uppercase text-gray-500 tracking-widest text-xs">
+            Playlist
+          </h4>
+          <h1 class="mt-0 mb-2 text-white text-4xl">Brooke Falls</h1>
+          <p class="text-gray-600 text-sm">
+            Created by <a>Spotify</a> - {songs.length} Songs {millisToMinutesAndSeconds(
+              songs_time
+            )}
+          </p>
+        </div>
+      </div>
+
+      <!-- action buttons -->
+      <!-- <div class="mt-6 flex justify-between">
+          <div class="flex">
+            <button
+              on:click={shuffle}
+              class="bg-green-500 ml-4 p-2 text-green-100 block px-8 rounded-full"
+              >Shuffle
+            </button>
+          </div>
+        </div> -->
+
+      <!-- song list   -->
+      <div class="mt-10">
+        <!-- song list header -->
+        <div class="flex text-gray-600">
+          <div class="p-2 w-8 flex-shrink-0" />
+          <div class="p-2 w-8 flex-shrink-0" />
+          <div class="p-2 w-full">Title</div>
+          <div class="p-2 w-full">Artist</div>
+          <div class="p-2 w-full">Album</div>
+          <div class="p-2 w-12 flex-shrink-0 text-right">⏱</div>
+        </div>
+        {#each songs as song}
+          <SpotifySong {song} />
+        {/each}
+      </div>
+    </div>
+  </div>
   <div class="container max-w-5xl mx-auto m-8">
     <div class="w-full mb-4">
       <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
@@ -198,58 +248,6 @@
       </div>
       <div class="w-full sm:w-1/2">
         <Thumb />
-      </div>
-    </div>
-    <div class="flex flex-wrap xl:w-[1060px] flex-col-reverse">
-      <div class="bg-black p-9 text-gray-300 min-h-screen p-2">
-        <!-- header -->
-        <div class="flex flex-wrap p-5">
-          <img
-            class="mr-6 h-[460px]"
-            src="https://yt3.ggpht.com/vhUgGzGNZhWO5haBqTgF2ZMnqHDWX2usT0RVvlvEaGd0FbfKelxkjKYHBe0Wecip_f39ow7-5A=s900-c-k-c0x00ffffff-no-rj"
-          />
-          <div class="flex flex-col justify-center">
-            <!-- content -->
-            <h4
-              class="mt-0 mb-2 uppercase text-gray-500 tracking-widest text-xs"
-            >
-              Playlist
-            </h4>
-            <h1 class="mt-0 mb-2 text-white text-4xl">Brooke Falls</h1>
-            <p class="text-gray-600 text-sm">
-              Created by <a>Spotify</a> - {songs.length} Songs {millisToMinutesAndSeconds(
-                songs_time
-              )}
-            </p>
-          </div>
-        </div>
-
-        <!-- action buttons -->
-        <!-- <div class="mt-6 flex justify-between">
-          <div class="flex">
-            <button
-              on:click={shuffle}
-              class="bg-green-500 ml-4 p-2 text-green-100 block px-8 rounded-full"
-              >Shuffle
-            </button>
-          </div>
-        </div> -->
-
-        <!-- song list   -->
-        <div class="mt-10">
-          <!-- song list header -->
-          <div class="flex text-gray-600">
-            <div class="p-2 w-8 flex-shrink-0" />
-            <div class="p-2 w-8 flex-shrink-0" />
-            <div class="p-2 w-full">Title</div>
-            <div class="p-2 w-full">Artist</div>
-            <div class="p-2 w-full">Album</div>
-            <div class="p-2 w-12 flex-shrink-0 text-right">⏱</div>
-          </div>
-          {#each songs as song}
-            <SpotifySong {song} />
-          {/each}
-        </div>
       </div>
     </div>
   </div>
@@ -577,14 +575,7 @@
     </div>
   </div>
 </section>
-<div class="max-w-4xl ml-auto mr-auto">
-  <p>
-    The Github repo for this blog is <a
-      href="https://github.com/Dev-Logan-Bennett?tab=repositories"
-      >💓 Courtesy of Logan Bennett</a
-    >.
-  </p>
-</div>
+
 <!--Footer-->
 <footer class="bg-white">
   <div class="container mx-auto px-8">
@@ -716,10 +707,14 @@
     </div>
   </div>
 
-  <a
-    href="https://www.freepik.com/free-photos-vectors/background"
-    class="text-gray-500">Website created by: Logan Bennett</a
-  >
+  <div class="flex items-center justify-center max-w-4xl ml-auto mr-auto">
+    <p>
+      The Github repo for this blog is <a
+        href="https://github.com/Dev-Logan-Bennett?tab=repositories"
+        >💓 Courtesy of Logan Bennett</a
+      >.
+    </p>
+  </div>
 </footer>
 
 <audio class="hidden" controls="controls">
