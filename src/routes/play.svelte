@@ -1,5 +1,4 @@
 <script>
-  import { getSession } from '../envFunctions.js';
   import Song from '../lib/Song.svelte';
 
   export let songs;
