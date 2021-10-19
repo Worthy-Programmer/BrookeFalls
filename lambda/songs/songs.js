@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { getSession } = require('../../src/envFunctions');
+const { getSession } = require('../envFunctions.js');
 
 const vars = getSession();
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, AUTH_CODE } = vars;

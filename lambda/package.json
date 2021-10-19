@@ -7,7 +7,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "dot-env": "^0.0.1"
+  },
   "devDependencies": {
     "md-yaml-json": "^1.1.1"
   }
