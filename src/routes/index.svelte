@@ -231,9 +231,6 @@
                     {#each posts as post}
                       <Post {post} {base} />
                     {/each}
-                    {#each posts as post}
-                      <Post {post} {base} />
-                    {/each}
                   </div>
                 </div>
               </div>

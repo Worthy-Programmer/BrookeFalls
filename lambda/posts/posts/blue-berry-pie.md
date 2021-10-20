@@ -1,7 +1,7 @@
 ---
-title: Create Your Blog with SvelteKit
+title: Blueberry pie was just released!
 date: 2021-10-03
-excerpt: It's time to rewrite your blog in SvelteKit!
+excerpt: Sing along with me in blueberry pie 😃
 url: 'https://www.brookefalls.com/uploads/1/8/4/2/18420859/editor/brookefalls.jpeg?1607475184'
 ---
 
@@ -48,10 +48,10 @@ A typical use of the layout file is adding a navigation bar. In SvelteKit, we sh
 ```html
 <!--lib/Nav.svelte-->
 <div>
-	<nav>
-		<a href="/"><h3 class="home">HOME</h3></a>
-		<a href="/about"><h3 class="about">about</h3></a>
-	</nav>
+  <nav>
+    <a href="/"><h3 class="home">HOME</h3></a>
+    <a href="/about"><h3 class="about">about</h3></a>
+  </nav>
 </div>
 ```
 
@@ -59,13 +59,13 @@ And in `__layout.svelte`, I can import the `Nav` component in this way:
 
 ```html
 <script>
-	import '../app.scss';
-	import Nav from '$lib/Nav.svelte';
+  import '../app.scss';
+  import Nav from '$lib/Nav.svelte';
 </script>
 
 <div class="g-app-wrapper">
-	<nav />
-	<slot></slot>
+  <nav />
+  <slot></slot>
 </div>
 ```
 
@@ -78,13 +78,13 @@ In SvelteKit, data are transfered in JSON format. For each page component that r
 ```js
 // index.json.js
 export function get() {
-	// our markdown files lie in src/posts.
-	let postTitles = fs
-		.readdirSync(`src/posts`)
-		.map((fileName) => getTitleFrom(fileName));
-	let body = JSON.stringify(postTitles);
+  // our markdown files lie in src/posts.
+  let postTitles = fs
+    .readdirSync(`src/posts`)
+    .map((fileName) => getTitleFrom(fileName));
+  let body = JSON.stringify(postTitles);
 
-	return { body };
+  return { body };
 }
 ```
 
@@ -95,13 +95,13 @@ And for the `[slug].svelte` page, we will also have a `[slug].json.js` to get th
 ```js
 // [slug].json.js
 export function get({ params }) {
-	// we could get the dynamic slug from the parameter of get.
-	const { slug } = params;
+  // we could get the dynamic slug from the parameter of get.
+  const { slug } = params;
 
-	const { metadata, content } = process(`src/posts/${slug}.md`);
-	const body = JSON.stringify({ metadata, content });
+  const { metadata, content } = process(`src/posts/${slug}.md`);
+  const body = JSON.stringify({ metadata, content });
 
-	return { body };
+  return { body };
 }
 ```
 
@@ -109,18 +109,18 @@ Now we have the function that supply the data, we can use the `load` function to
 
 ```html
 <script context="module">
-	export async function load({ page, fetch }) {
-		const slug = page.params.slug;
-		const post = await fetch(`${slug}.json`).then((r) => r.json());
-		return {
-			props: { post },
-		};
-	}
+  export async function load({ page, fetch }) {
+    const slug = page.params.slug;
+    const post = await fetch(`${slug}.json`).then((r) => r.json());
+    return {
+      props: { post },
+    };
+  }
 </script>
 
 <script>
-	// post will have metadata and content
-	export let post;
+  // post will have metadata and content
+  export let post;
 </script>
 
 <!--show the post html with @html-->
@@ -145,14 +145,14 @@ import remark2rehype from 'remark-rehype';
 import stringify from 'rehype-stringify';
 
 let processor = unified()
-	.use(remarkParse) // parse into markdown syntax tree
-	.use(remark2rehype) // convert to html syntax tree
-	.use(stringify); // turn html syntax tree to html
+  .use(remarkParse) // parse into markdown syntax tree
+  .use(remark2rehype) // convert to html syntax tree
+  .use(stringify); // turn html syntax tree to html
 
 // process function will return the generated html string.
 function process(filename) {
-	// use vfile to read the file, could use fs if you like.
-	return processor.processSync(vfile.readSync(filename));
+  // use vfile to read the file, could use fs if you like.
+  return processor.processSync(vfile.readSync(filename));
 }
 ```
 

@@ -7,7 +7,7 @@
 
 <div class="article-card-left">
   <div>
-    <img class="article-image" src={post.meta.url} alt="" />
+    <img class="article-image h-44 w-44" src={post.meta.url} alt="" />
     <h2 class="article-title">
       <a href={`${base}/${post.slug}`}>{post.meta.title}</a>
     </h2>

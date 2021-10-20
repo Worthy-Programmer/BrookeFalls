@@ -1,5 +1,5 @@
 ---
-title: Decorating Your Blog
+title: Me looking fancy!
 date: 2021-10-05
 excerpt: Little fancy look!
 url: https://im4.ezgif.com/tmp/ezgif-4-1d0753f02a28.jpg
