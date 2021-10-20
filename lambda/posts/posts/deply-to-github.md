@@ -1,8 +1,8 @@
 ---
 title: Come sing with me!
 date: 2021-10-04
-excerpt: 'Fun fact: Github Pages is free!'
-url: https://ibb.co/J3j7tZm
+excerpt: 'Get lost in my eyes'
+url: https://im4.ezgif.com/tmp/ezgif-4-4280dda42712.jpg
 ---
 
 After the first post, we already have a blog that runs on the local machine. Now, let's deploy it to Github Pages!

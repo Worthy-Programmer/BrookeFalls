@@ -152,15 +152,15 @@
                       <div class="relative z-20 text-center p-5">
                         <span
                           class="inline-block text-white uppercase text-xs tracking-wide"
-                          >Diving</span
+                          >NYC</span
                         >
                         <h2
                           class="text-white font-semibold font-serif text-xl my-5"
                         >
-                          Diving for Sharks, the best experience in the country
+                          Pretty Woman
                         </h2>
                         <span class="inline-block text-xs text-white font-sans"
-                          >Every day of the week</span
+                          >The Playhouse in NYC</span
                         >
                       </div>
                     </div>
