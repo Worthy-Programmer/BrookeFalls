@@ -8,14 +8,12 @@
   import brookePolkadot from '../images/brookePolkadot.jpg';
 
   export async function load({ fetch, page: { host } }) {
-    const posts = await (
-      await fetch(`https://${host}/.netlify/functions/posts`)
-    )
-      .json()
-      .map((post) => {
-        post.slug = getSlug(post.meta.path);
-        return post;
-      });
+    const posts = (
+      await (await fetch(`https://${host}/.netlify/functions/posts`)).json()
+    ).map((post) => {
+      post.slug = getSlug(post.meta.path);
+      return post;
+    });
 
     posts.sort(sortPostsByDate);
 
