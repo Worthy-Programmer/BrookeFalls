@@ -2,7 +2,7 @@
 title: Decorating Your Blog
 date: 2021-10-05
 excerpt: Little code but fancy look!
-url: ../images/brookeDress.jpg
+url: https://ibb.co/Nys6M7k
 ---
 
 This is a post on some isolated styling features I added to this blog site and it may grow while I update the site. You could certainly skip this one and starting work on your own blog~

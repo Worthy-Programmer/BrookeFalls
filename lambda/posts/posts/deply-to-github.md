@@ -2,7 +2,7 @@
 title: Come sing with me!
 date: 2021-10-04
 excerpt: 'Fun fact: Github Pages is free!'
-url: ../images/brookeEyes.jpg
+url: https://ibb.co/J3j7tZm
 ---
 
 After the first post, we already have a blog that runs on the local machine. Now, let's deploy it to Github Pages!

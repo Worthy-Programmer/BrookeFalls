@@ -180,15 +180,15 @@
                       <div class="relative z-20 text-center p-5">
                         <span
                           class="inline-block text-white uppercase text-xs tracking-wide"
-                          >Food</span
+                          >Celine Dion</span
                         >
                         <h2
                           class="text-white font-semibold font-serif text-xl my-5"
                         >
-                          Take your tastebuds for a ride with these places
+                          Singing my favorite artist
                         </h2>
                         <span class="inline-block text-xs text-white font-sans"
-                          >Different cuisine</span
+                          >My heart will go on</span
                         >
                       </div>
                     </div>
