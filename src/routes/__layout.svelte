@@ -26,6 +26,6 @@
 
 <Sidebar bind:open />
 <Nav bind:sidebar={open} />
-<div class="g-app-wrapper">
+<div>
   <slot />
 </div>

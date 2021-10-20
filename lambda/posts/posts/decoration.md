@@ -2,7 +2,7 @@
 title: Decorating Your Blog
 date: 2021-10-05
 excerpt: Little code but fancy look!
-url: https://media.istockphoto.com/photos/paint-on-canvas-coloured-sections-with-bright-shades-picture-id1282500710?b=1&k=20&m=1282500710&s=170667a&w=0&h=JuBCl40zOvbQ6SJhLJVYiPMvP5iRGhT-HEeJr9kwvUk=
+url: ../images/brookeDress.jpg
 ---
 
 This is a post on some isolated styling features I added to this blog site and it may grow while I update the site. You could certainly skip this one and starting work on your own blog~
@@ -46,15 +46,15 @@ It's very common to have a link to the Github repo and it is super easy using Sv
 
 ```html
 <script>
-	import '../app.scss';
-	import Nav from '$lib/Nav.svelte';
-	import GithubCorner from '$lib/GithubCorner.svelte';
+  import '../app.scss';
+  import Nav from '$lib/Nav.svelte';
+  import GithubCorner from '$lib/GithubCorner.svelte';
 </script>
 
 <GithubCorner />
 
 <div class="g-app-wrapper">
-	<nav />
-	<slot></slot>
+  <nav />
+  <slot></slot>
 </div>
 ```

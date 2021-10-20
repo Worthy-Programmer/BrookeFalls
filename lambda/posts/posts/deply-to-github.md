@@ -1,8 +1,8 @@
 ---
-title: Deploy the blog to Github Pages
+title: Come sing with me!
 date: 2021-10-04
 excerpt: 'Fun fact: Github Pages is free!'
-url: https://media.istockphoto.com/photos/illuminated-glass-wall-picture-id1252419763?b=1&k=20&m=1252419763&s=170667a&w=0&h=ao9KGBpdTnIZH0fRQV5GWP2Atvmf2QVR4EgnrYR_ymo=
+url: ../images/brookeEyes.jpg
 ---
 
 After the first post, we already have a blog that runs on the local machine. Now, let's deploy it to Github Pages!
@@ -95,14 +95,14 @@ Then, we should update the directory or href in our component or javascript file
 ```html
 <!-- lib/Nav.svelte -->
 <script>
-	import { base } from '$app/paths';
+  import { base } from '$app/paths';
 </script>
 
 <div>
-	<nav>
-		<a href="{base}/"><h3 class="home">HOME</h3></a>
-		<a href="{base}/about"><h3 class="about">about</h3></a>
-	</nav>
+  <nav>
+    <a href="{base}/"><h3 class="home">HOME</h3></a>
+    <a href="{base}/about"><h3 class="about">about</h3></a>
+  </nav>
 </div>
 ```
 
@@ -112,10 +112,10 @@ Or in `index.svelte`, we need to update the json to load:
 import { base } from '$app/paths';
 
 export async function load({ fetch }) {
-	const posts = await fetch(`${base}/index.json`).then((r) => r.json());
-	return {
-		props: { posts },
-	};
+  const posts = await fetch(`${base}/index.json`).then((r) => r.json());
+  return {
+    props: { posts },
+  };
 }
 ```
 
