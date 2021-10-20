@@ -398,7 +398,7 @@
                       Recent Posts
                     </h2>
                     <ul>
-                      {#each posts as post}
+                      {#each posts.slice(0, 3) as post}
                         <PostSide {post} {base} />
                       {/each}
                     </ul>
