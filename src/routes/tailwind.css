@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.g-app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@layer base {
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500;
+  }
+  [type='checkbox'],
+  [type='radio'] {
+    @apply border-gray-300 rounded text-indigo-600 focus:ring-indigo-500;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Scheherazade New', serif;
+    font-weight: 400;
+    src: url(https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap)
+      format('woff');
+  }
+}
