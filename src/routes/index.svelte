@@ -1,22 +1,15 @@
 <script context="module">
 	import dayjs from 'dayjs';
-	import brookeDress from '../images/brookeDress.jpg';
-	import brookeUke from '../images/brookeUke.jpg';
-	import brookeEyes from '../images/brookeEyes.jpg';
 	import brookePretty from '../images/brookePretty.jpg';
 	import brookeMic from '../images/brookeMic.jpg';
 	import brookePolkadot from '../images/brookePolkadot.jpg';
 
 	export async function load({ fetch, page: { host } }) {
-		const posts =
-			// await (await fetch(`https://${host}/.netlify/functions/posts`)).json()
-			(
-				await (
-					await fetch(
-						'https://lucid-hawking-eebb9b.netlify.app/.netlify/functions/posts'
-					)
-				).json()
-			).map((post) => {
+		const posts = await (
+			await fetch(`https://${host}/.netlify/functions/posts`)
+		)
+			.json()
+			.map((post) => {
 				post.slug = getSlug(post.meta.path);
 				return post;
 			});
@@ -130,12 +123,12 @@
 											<div class="relative z-20 text-center p-5">
 												<span
 													class="inline-block text-white uppercase text-xs tracking-wide"
-													>Hotels</span
+													>Showcases</span
 												>
 												<h2
 													class="text-white font-semibold font-serif text-xl my-5"
 												>
-													Places to stay in the island on your visit
+													Come visit us Thursday nights!
 												</h2>
 												<span class="inline-block text-xs text-white font-sans"
 													>Comfort and views</span

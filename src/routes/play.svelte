@@ -1,20 +1,17 @@
 <script>
-  import Song from '../lib/Song.svelte';
+	import Song from '../lib/Song.svelte';
+	import { get } from './songs.json';
+	import { onMount } from 'svelte';
 
-  export let songs;
+	let data;
 
-  export async function load({ fetch, page: { host } }) {
-    const songs = await (
-      await fetch(`https://${host}/.netlify/functions/songs`)
-    ).json();
-
-    console.log(songs);
-    return {
-      props: { songs },
-    };
-  }
+	onMount(async () => {
+		data = await get();
+	});
 </script>
 
 <div>
-  <Song {songs} />
+	{#if data !== undefined}
+		<Song {data} />
+	{/if}
 </div>
