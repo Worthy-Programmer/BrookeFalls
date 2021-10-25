@@ -3,19 +3,12 @@
   import { onMount } from 'svelte';
   import { get } from './songs.json';
   import SpotifySection from '$lib/SpotifySection.svelte';
+  import Thumb from '$lib/Thumb.svelte';
   let data;
 
   onMount(async () => {
     data = await get();
   });
-
-  const millisToMinutesAndSeconds = (millis) => {
-    var minutes = Math.floor(millis / 60000);
-    var seconds = ((millis % 60000) / 1000).toFixed(0);
-    return seconds == 60
-      ? minutes + 1 + ':00'
-      : minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-  };
 
   // const shuffle = () => {
   // 	shuffledSongs = shuffledSongs
@@ -49,20 +42,46 @@
     class="absolute top-14 left-44 xl:w-96 xl:h-96 md:h-72 md:w-72 sm:w-64 xs:w-40 xs:h-40 sm:h-44 bg-pinkBrooke rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"
   />
 
-  <div class="">
-    <div class="container px-6 py-4 mx-auto lg:flex lg:h-128 lg:py-16 ">
+  <div class="flex items-center justify-center">
+    <div class="px-6 py-4 lg:flex lg:h-128 lg:py-16 ">
       <div class="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
-        <div class="max-w-lg">
-          <h1
-            class="text-xl tracking-wide text-gray-800 lg:text-3xl xl:text-6xl"
-          >
-            Set your Title
-          </h1>
-          <p class="mt-4  text-gray-700">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quia
-            asperiores alias vero magnam recusandae adipisci ad vitae laudantium
-            quod rem voluptatem eos accusantium cumque.
-          </p>
+        <div class="max-w-lg pt-4">
+          <div class="animate-wiggle">
+            <h1 class="text-5xl tracking-wide text-gray-800 ">
+              Set your Title
+            </h1>
+            <p class="mt-4  text-gray-700">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quia
+              asperiores alias vero magnam recusandae adipisci ad vitae
+              laudantium quod rem voluptatem eos accusantium cumque.
+            </p>
+            <button
+              class="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600"
+            >
+              <span class="flex items-center space-x-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-pink-600 -rotate-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  />
+                </svg>
+                <span class="pr-6 text-gray-100">New Release 2021.09</span>
+              </span>
+              <span
+                class="pl-6 text-indigo-400 group-hover:text-gray-100 transition duration-200"
+                >See what's new &rarr;</span
+              >
+            </button>
+          </div>
+
           <div class="mt-6">
             <div class="flex items-center">
               <div class="grid gap-8 items-start justify-center">
@@ -70,33 +89,18 @@
                   <div
                     class="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"
                   />
-                  <button
-                    class="relative px-7 py-4 bg-black rounded-lg leading-none flex items-center divide-x divide-gray-600"
-                  >
-                    <span class="flex items-center space-x-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 text-pink-600 -rotate-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                        />
-                      </svg>
-                      <span class="pr-6 text-gray-100">New Release 2021.09</span
-                      >
-                    </span>
-                    <span
-                      class="pl-6 text-indigo-400 group-hover:text-gray-100 transition duration-200"
-                      >See what's new &rarr;</span
-                    >
-                  </button>
                 </div>
+                <svg
+                  class="animate-bounce my-6 w-6 h-6 text-amber-900"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </div>
             </div>
           </div>
@@ -113,7 +117,30 @@
       </div>
     </div>
   </div>
-  <SpotifySection {data} />
+  <div class="flex items-center justify-center">
+    <SpotifySection {data} />
+  </div>
+  <div class="container max-w-5xl mx-auto m-8">
+    <div class="w-full mb-4">
+      <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
+    </div>
+    <div class="flex flex-wrap">
+      <div class="w-5/6 sm:w-1/2 p-6">
+        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+          Lorem ipsum dolor sit amet
+        </h3>
+        <p class="text-gray-600 mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+          ipsum eu nunc commodo posuere et sit amet ligula.
+          <br />
+          <br />
+        </p>
+      </div>
+      <div class="w-full sm:w-1/2">
+        <Thumb />
+      </div>
+    </div>
+  </div>
   <div class="grid place-items-center min-h-screen">
     <!-- Responsive Grid Layout -->
     <div
@@ -145,7 +172,7 @@
   </div>
 
   <section
-    class="flex flex-col lg:flex-row items-start items-center lg:justify-center w-full w-full lg:px-10 py-12 "
+    class="flex flex-col lg:flex-row items-center lg:justify-center w-full w-full lg:px-10 py-12 "
   >
     <article
       class="bg-white w-4/5 lg:w-custom mb-10 lg:px-4 px-6 py-10 text-center text-primary-dark rounded-lg"

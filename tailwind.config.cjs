@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       animation: {
         blob: 'blob 7s infinite',
+        fadeIn: 'fadeIn 1.2s ease-in forwards',
+        wiggle: 'wiggle 1s ease-in-out infinite',
       },
       fontFamily: {
         headline: 'Scheherazade New',
@@ -22,6 +24,18 @@ module.exports = {
         orangeBrooke: '#DF9E38',
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        wiggle: {
+          '0%, 100%': {
+            transform: 'rotate(-3deg)',
+          },
+          '50%': {
+            transform: 'rotate(3deg)',
+          },
+        },
         blob: {
           '0%': {
             transform: 'translate(0px, 0px) scale(1)',
@@ -40,7 +54,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['motion-safe'],
+    },
   },
   plugins: [],
 };

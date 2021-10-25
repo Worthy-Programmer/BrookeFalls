@@ -1231,6 +1231,11 @@ sander@^0.5.0:
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+saos@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/saos/-/saos-1.2.0.tgz#31102fef2fb1bb10140c8f35f4e4877b26f7029c"
+  integrity sha512-KwHpkPAkLKuxxPpcF1nBYttgBj85nHCa1QdxK/WZrpD+QlCrwKoc7xletTs7i4zoU1yhNNjOdj0mYZNQ/h86nA==
+
 sass@^1.0.0:
   version "1.43.2"
   resolved "https://registry.npmjs.org/sass/-/sass-1.43.2.tgz"

@@ -1,6 +1,6 @@
-<div class=" grid place-items-center p-4">
+<div class=" flex items-center p-4">
   <div
-    class="relative xl:w-[640px] w-[400px] h-[360px] bg-white overflow-hidden"
+    class="relative xl:w-[640px] w-[400px] xs:w-[80vw] xs:p-0 h-[360px] bg-white overflow-hidden"
   >
     <!-- Top-left circle -->
     <div
@@ -58,7 +58,7 @@
       </a>
     </div>
     <!-- Content -->
-    <div class="relative p-8 flex flex-col justify-end h-full space-y-4 w-2/3">
+    <div class="relative p-1 flex flex-col justify-end h-full space-y-4 w-2/3">
       <p class="uppercase font-semibold text-xs text-purple-600 tracking-wider">
         Check me out!
       </p>
