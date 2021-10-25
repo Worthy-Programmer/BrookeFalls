@@ -1,24 +1,17 @@
 <script>
-  let postVar;
   let fileVar;
 
-  function submitForm() {
-    event.preventDefault();
-
-    const dataArray = new FormData();
-    dataArray.append('uploadFile', fileVar);
-
-    fetch('https://brooke-falls-blog.netlify.app/.netlify/functions/posts', {
-      method: 'POST',
-      headers: [['Content-Type', 'multipart/form-data']],
-      body: dataArray,
-    })
-      .then((response) => {
-        // Successfully uploaded
-      })
-      .catch((error) => {
-        // Upload failed
-      });
+  export async function load({ fetch, page: { host } }) {
+    const posts = (
+      await (await fetch(`https://${host}/.netlify/functions/posts`)).json()
+    ).map((post) => {
+      post.slug = getSlug(post.meta.path);
+      return post;
+    });
+    posts.sort(sortPostsByDate);
+    return {
+      props: { posts },
+    };
   }
 </script>
 

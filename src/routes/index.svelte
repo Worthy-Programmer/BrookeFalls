@@ -1,5 +1,6 @@
 <script context="module">
   import dayjs from 'dayjs';
+
   export async function load({ fetch, page: { host } }) {
     const posts = (
       await (await fetch(`https://${host}/.netlify/functions/posts`)).json()
@@ -12,6 +13,7 @@
       props: { posts },
     };
   }
+
   function sortPostsByDate(a, b) {
     dayjs(a.meta.date, 'MMM D, YYYY') - dayjs(b.meta.date, 'MMM D, YYYY');
   }
