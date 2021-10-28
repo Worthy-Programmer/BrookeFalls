@@ -1,7 +1,7 @@
 <script>
   let fileVar;
 
-  export async function load({ fetch, page: { host } }) {
+  export async function post({ fetch, page: { host } }) {
     const posts = (
       await (await fetch(`https://${host}/.netlify/functions/posts`)).json()
     ).map((post) => {
