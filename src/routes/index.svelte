@@ -15,7 +15,7 @@
   }
 
   function sortPostsByDate(a, b) {
-    dayjs(a.meta.date, 'MMM D, YYYY') - dayjs(b.meta.date, 'MMM D, YYYY');
+    dayjs(a.meta.date, 'MMM D, YYYY', 'es') - dayjs(b.meta.date, 'MMM D, YYYY', 'es');
   }
   function getSlug(path) {
     return path.slice(0, -3).substring(path.lastIndexOf('/') + 1);
